@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>microsoft loding animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        div.contener{            
+            height: 100px;
+            width: 100px;
+            transform: rotate(45deg);
+            position: relative;
+            animation: size 3s ease-in-out infinite;
+        }
+        span{             
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            animation: rotat 3s ease-in-out infinite;
+        }
+        span:nth-child(1){
+            top: 0;
+            left: 0;
+            background-color: #f65314;
+        }
+        span:nth-child(2){
+            top: 0;
+            right: 0;
+            background-color: #7cbb00;
+        }
+        span:nth-child(3){
+            bottom: 0;
+            left: 0;
+            background-color: #00a1f1;
+        }
+        span:nth-child(4){
+            bottom: 0;
+            right: 0;
+            background-color:#ffbb00;
+        }
+        @keyframes rotat {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform:rotate(360deg)
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+            
+        }
+        @keyframes size {
+            0%{
+                width: 100px;
+                height: 100px;
+            }
+            50%{
+                width: 150px;
+                height: 150px;
+            }
+            100%{
+                width: 100px;
+                height: 100px;
+            }
+            
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="contener">
+        <span class="box" id="box1"></span>
+        <span class="box" id="box2"></span>
+        <span class="box" id="box3"></span>
+        <span class="box" id="box4"></span>
+    </div>    
+</body>
+</html>
